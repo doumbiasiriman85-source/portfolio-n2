@@ -1,0 +1,571 @@
+ 
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    color:#fff;
+    line-height:1.6;
+}
+a{
+    text-decoration:none;
+}
+
+[class*="revele-"]{
+    opacity: 0;
+    transform: translateY(20px);
+    
+}
+
+.revele-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.revele-2{
+    transition-delay: .1s;
+}
+
+.revele-3{
+    transition-delay: .2s;
+}
+
+.revele-4{
+    transition-delay: .3s;
+}
+
+.revele-5{
+    transition-delay: .2s;
+    transform: translateX(-100px 0px);
+}
+
+/* .photo{
+    opacity: 0;
+    transform: translateX(-0px);
+}
+
+.photo-visible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: .2s;
+} */
+
+    /* header bare de navigation */
+header{
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: -50px;
+}
+header h2{
+    color:#000;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+nav ul li a{
+    color:#000;
+    transition:.3s;
+}
+nav ul li a.active,nav ul li a:hover{
+    color:#a7cf3b;
+    border-bottom:2px solid #a7cf3b;
+    padding-bottom:3px;
+}
+
+    /* hero bonjour je suis */
+.hero{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 40px;
+    min-height:100vh;
+    /* background-color: #000; */
+    background-image: url(img/image\ 2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    filter: 20%;
+
+}
+
+
+.hero-content{
+    flex:1;
+}
+.hero-content h4{
+    color:#a7cf3b;
+    margin-bottom:10px;
+    font-size: 1.5em;
+}
+.hero-content h1{
+    font-size:4em;
+    font-weight:bold;
+    color: white;
+}
+
+.hero-content span{
+    position: relative;
+}
+
+.hero-content span::before{
+    content: "Développeur";
+    color: white;
+    animation: words 5s infinite;
+}
+
+.hero-content span::after{
+    content: "";
+    /* background-color: #000; */
+    position: absolute;
+    width: calc(100% + 80px);
+    height: 100px;
+    border-left: 5px solid black;
+    right: -10;
+    animation: cursor 0.6s infinite;
+
+}
+
+@keyframes cursor{
+    0% { border-color: transparent; }
+    50% { border-color: #4c2fb5; }
+    100% { border-color: transparent; }
+}
+
+@keyframes words {
+  0%, 50%   { content: "Développeur"; }
+  51%, 100%  { content: "Designer";}
+}
+
+.hero-content p{
+    color:#ccc;
+    font-size: 1.5em;
+}
+.hero-image{
+    flex:1;
+    text-align:center;
+    position:relative;
+}
+.circle{
+    width:400px;
+    height:450px;
+    background:#a7cf3b;
+    border-radius:25%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:1;
+}
+.hero-image img{
+    width:300px;
+    border-radius:25px;
+    position:relative;
+    z-index:2;
+    
+}
+
+    /* a propos  */
+
+.about{
+    background:#1c1c1c;
+    padding:60px 40px;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.about h3{
+    color:#a7cf3b;
+    margin-bottom:15px;
+}
+.about-left{
+    flex:1;
+    text-align:center;
+}
+.about-left img{
+    width:200px;
+    border-radius:50px;
+    margin-bottom:15px;
+    background-color: #fff;
+    border: 3px solid #000000;
+}
+.about-left h2{
+    margin-top:10px;
+    color: white;
+}
+.about-right{
+    flex:2;
+}
+.about-right p{
+    color:#ccc;
+    margin-bottom:20px;
+}
+.info p{
+    margin-bottom:10px;
+}
+.info .label{
+    font-weight:bold;
+    color:#a7cf3b;
+    margin-right:5px;
+}
+.info .value{
+    color:#ccc;
+}
+.btn-cv{
+    display:inline-block;
+    padding:12px 20px;
+    background:#a7cf3b;
+    color:#000;
+    font-weight:bold;
+    border-radius:25px;
+    margin-top:20px;
+    transition: 0.3s;
+}
+
+.btn-cv:hover{
+    background-color: #4c2fb5;
+    color: white;
+}
+
+    /* STATISTIQUES AVEC 04*/
+.stats{
+    background:#111;
+    display:flex;
+    justify-content:space-around;
+    padding:40px;
+    text-align:center;
+    flex-wrap:wrap;
+}
+.stat{
+    flex:1;
+    min-width:150px;
+    margin:15px;
+}
+.stat h2{
+    color:#a7cf3b;
+    font-size:2em;
+}
+.stat p{
+    color:#ccc;
+}
+
+    /* SERVICES CE QUE JE FAIT */
+.services{
+    background:#222;
+    padding:60px 40px;
+    text-align:center;
+    
+}
+.services h3{
+    color:#a7cf3b;
+    margin-bottom:10px;
+}
+.services h2{
+    margin-bottom:40px;
+    color: white;
+}
+.service-cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.card{
+    background:#111;
+    color:#fff;
+    flex:1;
+    min-width:250px;
+    padding:80px;
+    border-radius:12px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    transition:.3s;
+    border: 1px solid #a7cf3b ;
+}
+.card:hover{
+    transform:translateY(-5px);
+}
+.card h4{
+    margin-bottom:10px;
+    color:#a7cf3b;
+    /* opacity: 40px; */
+}
+.card p{
+    color:#ccc;
+    font-size:0.95em;
+}
+
+.card i{
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4c2fb5;
+    top: -20px;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    /* border: 2px solid #4c2fb5; */
+}
+
+.card i:hover{
+    background-color: #a7cf3b;
+    transform: scale(1.2);
+    color: #000;
+}
+
+    /* COMPETENCES HTML CSS */
+.skills{
+    background:#1c1c1c;
+    padding:60px 40px;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;        
+    align-items:center;
+}
+.skills h3{
+    color:#a7cf3b;
+    margin-bottom:20px;
+}
+.skills-left{
+    flex:1;
+    text-align:center;
+}
+.skills-left img{
+    width:220px;
+    border-radius:50px;
+    background-color: white;
+    border: 3px solid #000000 ;
+}
+.skills-right{
+    flex:2;
+}
+.skill{
+    margin-bottom:20px;
+}
+.skill span{
+    display:flex;
+    justify-content:space-between;
+    font-size:0.9em;
+    color:#ccc;
+    margin-bottom:5px;
+}
+.bar{
+    background:#333;
+    height:10px;
+    border-radius:5px;
+    overflow:hidden;
+}
+.bar-progression{
+    height:100%;
+    background:#a7cf3b;
+}
+
+/* mes projets */
+
+#mes_projets{
+    background:#222;
+    padding:60px 50px;
+    text-align:center;
+}
+
+#mes_projets h3{
+    color:#a7cf3b;
+    margin-bottom:10px;
+}
+
+.projets{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+
+.sites_web{
+    background:#111;
+    color:#fff;
+    flex:1;
+    min-width:250px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    transition:.3s;
+    border: 1px solid #a7cf3b ;
+}
+
+.sites_web:hover{
+     transform:translateY(-5px);
+
+}
+
+.sites_web h4{
+    color: #a7cf3b;
+    margin-bottom: 10px;
+}
+
+.sites_web p{
+    font-size: 0.95em;
+}
+
+.sites_web button{
+    background-color: #a7cf3b;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 7px 5px;
+    /* text-decoration: none; */
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+ button:hover{
+    color: #ffffff;
+    background-color: #4c2fb5;
+    
+}
+
+    /* CONTACT FORMULAIRE*/
+
+.contact{
+    background:#1c1c1c;
+    padding:60px 40px;
+    text-align:center;
+}
+.contact h3{
+    color:#a7cf3b;
+    margin-bottom:15px;
+}
+.contact h2{
+    color: white;
+}
+.form{
+    max-width:600px;
+    margin:0 auto;
+    text-align:left;
+}
+.form input,.form textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #a7cf3b;
+    background:#111;
+    color:#fff;
+    border-radius:5px;
+}
+.form textarea{
+    height:120px;
+    resize:none;
+}
+.form button{
+    padding:12px 20px;
+    background:#a7cf3b;
+    color:#000;
+    font-weight:bold;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+.form button:hover{
+    background-color: #4c2fb5;
+    color: white;
+    
+}
+
+/* icone reseau social */
+.social{
+    margin-top:20px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+ 
+.social a {
+  font-size: 24px;
+  color: #fff;          
+  background: #a7cf3b;  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background: #4c2fb5; 
+  transform: scale(1.1); 
+   transform: rotate(360deg);
+}
+
+.button_whatsapp {
+    
+  position: fixed;
+  bottom: 10em;   /* distance du bas */
+  right: 20px;    /* distance de la droite */
+  background: #445c02; 
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 20px 25px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: 0.3s;
+  justify-content: flex-start;
+  
+}
+
+.button_whatsapp:hover{
+    background-color: #4c2fb5;
+}
+
+.bouton_retour{
+  position: fixed;
+  bottom: 20px;   /* distance du bas */
+  left: 20px;    /* distance de la droite */
+  background: #a7cf3b; /* vert de ton design */
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 15%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: 0.3s;
+  justify-content: flex-start;
+}
+
+.bouton_retour:hover{
+     background: #4c2fb5;
+    
+}
+
+    /* RESPONSIVE */
+@media(max-width:768px){
+.hero{flex-direction:column;text-align:center;}
+.about{flex-direction:column;}
+.stats{flex-direction:column;}
+.service-cards{flex-direction:column;}
+.skills{flex-direction:column;}
+#mes_projets{flex-direction: column;}
+}
