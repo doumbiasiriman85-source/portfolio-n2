@@ -12,7 +12,6 @@ navLinks.forEach(link => {
 });
 
 
-
 const nav = document.querySelector("header");
 window.addEventListener("scroll", () =>{
     if (window.scrollY > 120) {
@@ -44,8 +43,6 @@ const observer = new IntersectionObserver(handleIntersect, options);
 document.querySelectorAll('[class*="revele-"]').forEach(function (r) {
   observer.observe(r)
 })
-
-
 
 
 // const rato = .1

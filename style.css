@@ -85,6 +85,8 @@ nav ul li a.active,nav ul li a:hover{
     padding-bottom:3px;
 }
 
+
+
     /* hero bonjour je suis */
 .hero{
     background:#111;
@@ -520,7 +522,7 @@ nav ul li a.active,nav ul li a:hover{
 .button_whatsapp {
     
   position: fixed;
-  bottom: 10em;   /* distance du bas */
+  bottom: 4em;   /* distance du bas */
   right: 20px;    /* distance de la droite */
   background: #445c02; 
   color: #fff;
@@ -539,26 +541,6 @@ nav ul li a.active,nav ul li a:hover{
     background-color: #4c2fb5;
 }
 
-.bouton_retour{
-  position: fixed;
-  bottom: 20px;   /* distance du bas */
-  left: 20px;    /* distance de la droite */
-  background: #a7cf3b; /* vert de ton design */
-  color: #fff;
-  font-size: 22px;
-  text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 15%;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  z-index: 999;
-  transition: 0.3s;
-  justify-content: flex-start;
-}
-
-.bouton_retour:hover{
-     background: #4c2fb5;
-    
-}
 
     /* RESPONSIVE */
 @media(max-width:768px){
@@ -567,5 +549,6 @@ nav ul li a.active,nav ul li a:hover{
 .stats{flex-direction:column;}
 .service-cards{flex-direction:column;}
 .skills{flex-direction:column;}
+.button_whatsapp{bottom:1em;flex-direction: column;}
 #mes_projets{flex-direction: column;}
 }
